@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job-website</title>
+    <link rel="stylesheet" href="job.css">
+</head>
+<body>
+    <header class="first-page-header" >
+        <div class="header-content flex-design">
+            <div class="logo">
+                <img src="images/naukri_Logo.png">
+            </div>
+            <ul class="nav-links">
+                <li><a href="job.html">Home</a></li>
+                <li><a href="companies.html">Companies</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul> 
+        </div>
+    </header>
+    <div class="center">
+        <h1>Register</h1>
+        <form method="post">
+            <div class="txt_field">
+                <input type="name" required id="name">
+                <span></span>
+                <label>Username</label>
+            </div>
+            <div class="txt_field">
+                <input type="email" required id="email">
+                <span></span>
+                <label>Email</label>
+            </div>
+            <div class="txt_field">
+                <input type="password" required id="password">
+                <span></span>
+                <label>Password</label>
+            </div>
+            <div class="txt_field">
+                <input type="password" required id="password">
+                <span></span>
+                <label>Confirm Password</label>
+            </div>
+            
+            <div class="signin_link">
+            <input type="submit" value="Register" id="signupBtn" onclick="auth()">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function auth(){
+            var email=document.getElementById("email").value;
+            var password=document.getElementById("password").value;
+            if(email && password){
+                window.location.assign("job.html");
+                alert("registration successful");
+            }
+            else{
+                alert("enter valid data")
+                return;
+            }
+        }
+    </script>
+</body>
+</html>
